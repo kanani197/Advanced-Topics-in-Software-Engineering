@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <h2>Scientific Calculator</h2>
+        <div class="top-buttons">
+            <button onclick="toggleShift()">SHIFT</button>
+            <button onclick="toggleMode()" id="modeBtn">DEG</button>
+            <button onclick="toggleHistory()">HIST</button>
+            <button onclick="toggleTheme()">🌙</button>
+        </div>
+    </div>
+
+    <!-- DISPLAY -->
+    <input type="text" id="display" readonly>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+
+        <button onclick="append('(')">(</button>
+        <button onclick="append(')')">)</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="deleteLast()">DEL</button>
+
+        <button onclick="applyFunc('sin')">sin</button>
+        <button onclick="applyFunc('cos')">cos</button>
+        <button onclick="applyFunc('tan')">tan</button>
+        <button onclick="applyFunc('sqrt')">√</button>
+
+        <button onclick="applyFunc('square')">x²</button>
+        <button onclick="applyFunc('cube')">x³</button>
+        <button onclick="applyFunc('factorial')">n!</button>
+        <button onclick="append('/')">÷</button>
+
+        <button onclick="append('7')">7</button>
+        <button onclick="append('8')">8</button>
+        <button onclick="append('9')">9</button>
+        <button onclick="append('*')">×</button>
+
+        <button onclick="append('4')">4</button>
+        <button onclick="append('5')">5</button>
+        <button onclick="append('6')">6</button>
+        <button onclick="append('-')">−</button>
+
+        <button onclick="append('1')">1</button>
+        <button onclick="append('2')">2</button>
+        <button onclick="append('3')">3</button>
+        <button onclick="append('+')">+</button>
+
+        <button onclick="append('0')">0</button>
+        <button onclick="append('.')">.</button>
+        <button onclick="calculate()">=</button>
+
+    </div>
+
+    <!-- HISTORY -->
+    <div class="history" id="historyPanel">
+        <h3>History</h3>
+        <ul id="historyList"></ul>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
